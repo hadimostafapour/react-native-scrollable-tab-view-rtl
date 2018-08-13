@@ -1,6 +1,6 @@
 
-## react-native-scrollable-tab-view
-[![npm version](https://badge.fury.io/js/react-native-scrollable-tab-view.svg)](https://badge.fury.io/js/react-native-scrollable-tab-view)
+## react-native-scrollable-tab-view-extended
+[![npm version](https://badge.fury.io/js/react-native-scrollable-tab-view-extended.svg)](https://badge.fury.io/js/react-native-scrollable-tab-view-extended)
 
 This is probably my favorite navigation pattern on Android, I wish it
 were more common on iOS! This is a very simple JavaScript-only
@@ -9,21 +9,23 @@ the animations behind this work, check out the Rebound section of the
 [React Native Animation Guide](https://facebook.github.io/react-native/docs/animations.html)
 
 
+This project is a fork of [happypancake/react-native-scrollable-tab-view](https://github.com/happypancake/react-native-scrollable-tab-view) that is RTL supported.
+
 ## Add it to your project
 
-1. Run `npm install react-native-scrollable-tab-view --save`
-2. `var ScrollableTabView = require('react-native-scrollable-tab-view');`
+1. Run `npm install react-native-scrollable-tab-view-extended --save`
+2. `var ScrollableTabView = require('react-native-scrollable-tab-view-extended');`
 
 ## Demo
 <a href="https://appetize.io/embed/6qfv7eydjtm34mhn6qwj2nt3xm?embed=true&screenOnly=false&xdocMsg=true&debug=true&scale=100&deviceColor=black&orientation=portrait&device=iphone6s&osVersion=9.3&deviceId=RGV2aWNlOjU2Y2FjNTExZWQwOTM2MTEwMGRhYTNlNg&platform=ios&width=375&height=668&phoneWidth=416&phoneHeight=870&screenOffsetLeft=21&screenOffsetTop=100&params=%7B%7D" target="_blank"><strong>Run this example</strong></a>
 
-<a href="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view/master/demo_images/demo.gif"><img src="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view/master/demo_images/demo.gif" width="350"></a>
-<a href="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view/master/demo_images/demo-fb.gif"><img src="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view/master/demo_images/demo-fb.gif" width="350"></a>
+<a href="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view-extended/master/demo_images/demo.gif"><img src="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view-extended/master/demo_images/demo.gif" width="350"></a>
+<a href="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view-extended/master/demo_images/demo-fb.gif"><img src="https://raw.githubusercontent.com/brentvatne/react-native-scrollable-tab-view-extended/master/demo_images/demo-fb.gif" width="350"></a>
 
 ## Basic usage
 
 ```javascript
-var ScrollableTabView = require('react-native-scrollable-tab-view');
+var ScrollableTabView = require('react-native-scrollable-tab-view-extended');
 
 var App = React.createClass({
   render() {
@@ -44,7 +46,7 @@ Suppose we had a custom tab bar called `CustomTabBar`, we would inject
 it into our `ScrollableTabView` like this:
 
 ```javascript
-var ScrollableTabView = require('react-native-scrollable-tab-view');
+var ScrollableTabView = require('react-native-scrollable-tab-view-extended');
 var CustomTabBar = require('./CustomTabBar');
 
 var App = React.createClass({
@@ -59,17 +61,17 @@ var App = React.createClass({
   }
 });
 ```
-To start you can just copy [DefaultTabBar](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/DefaultTabBar.js).
+To start you can just copy [DefaultTabBar](https://github.com/hadimostafapour/react-native-scrollable-tab-view-extended/blob/master/DefaultTabBar.js).
 
 ## Examples
 
-[SimpleExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/SimpleExample.js).
+[SimpleExample](https://github.com/hadimostafapour/react-native-scrollable-tab-view-extended/blob/master/Example/SimpleExample.js).
 
-[ScrollableTabsExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/ScrollableTabsExample.js).
+[ScrollableTabsExample](https://github.com/hadimostafapour/react-native-scrollable-tab-view-extended/blob/master/Example/ScrollableTabsExample.js).
 
-[OverlayExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/OverlayExample.js).
+[OverlayExample](https://github.com/hadimostafapour/react-native-scrollable-tab-view-extended/blob/master/Example/OverlayExample.js).
 
-[FacebookExample](https://github.com/skv-headless/react-native-scrollable-tab-view/blob/master/Example/FacebookExample.js).
+[FacebookExample](https://github.com/hadimostafapour/react-native-scrollable-tab-view-extended/blob/master/Example/FacebookExample.js).
 
 ## Props
 
@@ -95,6 +97,7 @@ To start you can just copy [DefaultTabBar](https://github.com/skv-headless/react
 - **`contentProps`** _(Object)_ - props that are applied to root `ScrollView`/`ViewPagerAndroid`. Note that overriding defaults set by the library may break functionality; see the source for details.
 - **`scrollWithoutAnimation`** _(Bool)_ - on tab press change tab without animation.
 - **`prerenderingSiblingsNumber`** _(Integer)_ - pre-render nearby # sibling, `Infinity` === render all the siblings, default to 0 === render current page.
+- **`direction`** _(String)_ - set layout direction (_rtl_) default is _ltr_
 
 ## Contribution
 **Issues** are welcome. Please add a screenshot of bug and code snippet. Quickest way to solve issue is to reproduce it on one of the examples.
