@@ -13,7 +13,7 @@ const {
   I18nManager,
   Platform
 } = ReactNative;
-const {ViewPropTypes} = ReactNative = require('react-native');
+const {ViewPropTypes} = require('react-native');
 
 const TimerMixin = require('react-timer-mixin');
 const createReactClass = require('create-react-class');
