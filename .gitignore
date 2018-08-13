@@ -1,0 +1,6 @@
+.project
+npm-debug.log
+node_modules/
+.idea/
+.reploy
+.DS_Store
